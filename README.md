@@ -9,7 +9,7 @@ This guide will take you through what you need to know to produce efficient, dyn
 [Visuals]
 [Controls]
 
-### Markdown
+### Markdowyn
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
