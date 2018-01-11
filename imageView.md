@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Image View Tutorial
 
 The tutorial describes the NUI _ImageView_ control in detail.
