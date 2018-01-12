@@ -1,3 +1,7 @@
+---
+layout: default
+title: ImageView Tutorial
+---
 # Image View Tutorial
 
 The tutorial describes the NUI _ImageView_ control in detail.
@@ -6,16 +10,16 @@ The tutorial describes the NUI _ImageView_ control in detail.
 
 The ImageView is a control which displays a visual.
 
-It's commmon use is for ImageVisual.
+It's commmon use is for showing an ImageVisual so this tutorial will focus on that.
 
 ### Basic creation and usage
 
 A basic instance of an ImageView is created with a file path:
-If the filename is to a Nine Path, GIF, SVG or regular image then the respective
+If the filename is to a Nine Path, GIF, SVG or regular image then the respectivUtcDaliVisualActione
 Visual will be created and used.
 
 ~~~{.cpp}
-ImageView imageView = ImageView::New("./images/apple.svg");
+auto imageView = ImageView::New("./images/apple.svg");
 ~~~
 
 
@@ -27,7 +31,7 @@ Below example uses the gallery-3.jpg for the ImageView and forces ATLASING off.
 Each Visual has it's own Properties which can be set.
 
 ~~~{.cpp}
-ImageView imageView = ImageView:New();
+auto imageView = ImageView:New();
 
 imageView.SetProperty( ImageView::Property::IMAGE,
                        Property::Map().Add( ImageVisual::Property::URL, "./images/apple.svg" )
@@ -37,17 +41,18 @@ imageView.SetProperty( ImageView::Property::IMAGE,
 
 To subsequently change a visual then set the IMAGE property a new visual property map.
 
-~~~{.cpp}
+~~~{.cpp}UtcDaliControlActionOnVisual
 imageView.SetProperty( ImageView::Property::IMAGE,
                        Property::Map().Add( ImageVisual::Property::URL, "./images/house.png" )
                                       .Add( ImageVisual::Property::ATLASING, false  ) );
 
+imageView.SetParentOrigin( ParentOrigin::CENTER );
+imageView.SetResizePolicy( ResizePolicy::USE_NATURAL_SIZE, Dimension::ALL_DIMENSIONS );
 ~~~
 
-This figure is displayed via an ImageView:
+This image is displayed via an ImageView:
 
-![ ](../images/house.png)
-
+<img src="../images/image-view.png" width="400" height="600">
 ### Image View Properties
 
 ImageView has the following properties:
