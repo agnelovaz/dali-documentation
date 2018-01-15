@@ -29,9 +29,8 @@ The main DALi concepts are outlined below and followed by tutorials to show DALi
 
 ## Learn about the DALi main concepts
 
-| [Visuals]( ./docs/concepts/visuals-summary ) |
-| ---| --- |
-| [Controls]( ./docs/concepts/control ) |
+[Visuals]( ./docs/concepts/visuals-summary ) <br>
+[Controls]( ./docs/concepts/control )
 
 
 ## Tutorials
