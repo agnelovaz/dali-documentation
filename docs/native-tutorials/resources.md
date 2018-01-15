@@ -14,7 +14,7 @@ The common method to access these resources is through Visuals.
 
 Controls then use these visuals to display what is required.
 
-See [ImageView tutorial](../NativeTutorials/imageView.md)
+See [ImageView tutorial](imageView)
 
 ## Loading images
 
@@ -37,10 +37,11 @@ Controls should process the provoded url and internally create the matching Imag
 Visual creation will automatically determine if the Image is an N_PATCH, SVG, GIF not regular image from the image data.
 
 #### Image Properties
+
 | Property Name         | Description       |
 |-----------------------|-------------------|
 | ALPHA_MASK_URL        | url to an image that will mask the main content image |
-| CROP_TO_MASK          | Flag to determine if main content image should crop to match mask size
+| CROP_TO_MASK          | Flag to determine if main content image should crop to match mask size |
 | FITTING_MODE          | By default the image will shrink to fit the desiredHeight and desiredWidth, other modes available |
 | SAMPLING_MODE         | The type of sampling to be used. Default is Box. |
 | DESIRED_WIDTH         | The width you would like the Image to be.  Affected by FITTING_MODE        |
@@ -64,10 +65,9 @@ Visual creation will automatically determine if the Image is an N_PATCH, SVG, GI
 |-----------------------|-------------------|
 | BATCH_SIZE  | Number of Images to decode before animation starts, Default is 1.
 | CACHE_SIZE  | Number of images to keep cached, Can increase or decrease depending on memory avaiable.
-| FRAME_DELAY | Millisecond delay between frames
+| FRAME_DELAY | Millisecond delay between frames |
 
-
-Synchronous loading has niche uses, .eg ensuring image has loaded before continuing to execute application code,</br>
+Synchronous loading has niche uses, .eg ensuring image has loaded before continuing to execute application code,
 the common use is to connect to the control's ResourceReady Signal and peform operations at that point.
 
 ## Caching
@@ -86,7 +86,7 @@ To support this, DALi can resize an image at load time so that its in-memory cop
 and its visual quality benefits from being prefiltered. </br>
 DESIRED_WIDTH and DESIRED_HEIGHT can be set to the Image visual and then FITTING_MODE.</br>
 
-The Dali::FittingMode namespace provides 4 algorithms, which can be used to fit an image to a desired rectangle,</br>
+The Dali::FittingMode namespace provides 4 algorithms, which can be used to fit an image to a desired rectangle,
 a desired width, or a desired height.</br>
 
 The fitting modes and suggested use cases are as follows:
