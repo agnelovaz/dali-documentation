@@ -16,23 +16,27 @@ The required Dali repositories are hosted in here in DaliHub github and the NUI 
 #### Setup
 
 Dotnet, Dali, TizenFX and tizenfx-stub need to be setup.
+dali-csharp will need a Tizen.org ID for downloading.
 
-    Install dotnet 2.0: follow the instructions here: https://www.microsoft.com/net/core#linuxubuntu
+    Install dotnet 2.0: follow the instructions below:
+    https://www.microsoft.com/net/core#linuxubuntu
 
-    Clone the repository git@github.com:dalihub/dali into your main repository folder.
-    Clone the repository git@github.com:dalihub/dali-adaptor into your main repository folder.
-    Clone the repository git@github.com:dalihub/dali-toolkit into your main repository folder.
-    Clone the repository git@github.com:dalihub/tizenfx-stub.git into your main repository folder.
-    Clone  ssh://<your tizen id>@review.tizen.org:29418/platform/core/uifw/dali-csharp-binder
-    Clone the repository git@github.com:Samsung/tizenfx.git into your main repository folder.
+    Clone the following repos into your main repository folder:
 
-    Optional: Set up a new application repo or folder,<br>
-              e.g. you could clone 106.1.8.182:~david.steele/Git/Tizen/nui-contact-demo
-              your csproj should contain the following references:
+    git@github.com:dalihub/dali-adaptor
+    git@github.com:dalihub/dali-toolkit
+    git@github.com:dalihub/tizenfx-stub.git
+    git@github.com:Samsung/tizenfx.git
+    review.tizen.org:29418/platform/core/uifw/dali-csharp-binder
 
-             <ItemGroup>
-               <ProjectReference Include="..\tizenfx\src\Tizen.NUI\Tizen.NUI.csproj" />
-             </ItemGroup>
+    Optional:
+
+    Set up a new application repo or folder,<br>
+    your csproj should contain the following references:
+
+    <ItemGroup>
+      <ProjectReference Include="..\tizenfx\src\Tizen.NUI\Tizen.NUI.csproj" />
+    </ItemGroup>
 
 #### Building
 
