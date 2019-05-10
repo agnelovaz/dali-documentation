@@ -1,11 +1,10 @@
 ---
 layout: default
-title:  "dali first page"
+title:  "Home"
 date:   2018-01-10 15:17:09 +0000
 ---
 
 ## Welcome to DALi
-
 
 This guide will take you through what you need to know to produce efficient, dynamic and visually rich applications in DALi easily.<br>
 
@@ -59,3 +58,7 @@ The main DALi concepts are outlined below and followed by tutorials to show DALi
 [ImageView]( ./docs/nui-tutorials/image-view ) <br>
 [TextLabel]( ./docs/nui-tutorials/text-label ) <br>
 [Visuals]( ./docs/nui-tutorials/visuals ) <br>
+
+## Tools
+
+[Tracing]( ./docs/tools/tracing ) <br>
