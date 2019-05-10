@@ -13,3 +13,5 @@ Construction and testing is done via Jekyll hence all edits done in md (markdown
  
 See below link for online documentation.
 https://dalihub.github.io/
+
+https://agnelovaz.github.io/dali-documentation/
