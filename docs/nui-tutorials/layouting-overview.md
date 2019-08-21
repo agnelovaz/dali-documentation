@@ -40,7 +40,7 @@ e.g. LinearLayout
 
 <img src="{{site.baseurl}}/assets/images/layouting/linearLayout.png">
 
-e.g GridLayout  
+e.g GridLayout
 
 <img src="{{site.baseurl}}/assets/images/layouting/gridLayout.png">
 
@@ -229,6 +229,23 @@ LinearAlignment defines where the children should start being positioned from, u
 | LinearOrientation      | LinearLayout.Orientation   | Gets/Sets Orientation of the linear layout, vertical or horizontal |
 | CellPadding            | Size2D      | Gets/Sets Spacing between the cells, horizontal space and vertical space |
 
+
+#### AlignmentType
+
+By default items are aligned at the Top, Begin.
+Choose from the below alignment options
+
+| Alignment  | Info |
+| ---------- | ----------- |
+| Begin ||
+| End ||
+| CenterHorizontal | Vetical will be set to top |
+| Top ||
+| Bottom ||
+| CenterVertical | Horizontal will be set to start |
+| Center | Both vertical and horizontal are centered |
+
+
 [Back to top](#top)
 
 <a name="gridLayout"></a>
@@ -244,7 +261,21 @@ The number of columns can be specified and the rows will automatically increased
 <a name="flexlayout"><br>
 ### Flex Layout
 
-Layout under construction.
+A layout which provides features like wrapping so if items no long fit on an axis they can automatically be positioned on another row or column.
+
+Justification applies to the flex Direction axis whilst Alignment is the (other) cross axis.  Changing the Direction will apply the Justification to the new direction.
+
+Natural size of items are used which can be different for each item.
+
+Setting the size of an item has no effect.
+
+| Property               | Type            | Description |
+| -----------------------| --------------- | ------------ |
+| Direction              | FlexDirection   | The orientation the flex items are laid out in (Column/Row) |
+| Justification          | FlexJustification | Alignment of items along the flex axis when free space available |
+| Alignment              | AlignmentType     | Alignment of items along the cross axis when free space available |
+| WrapType               | FlexWrapType    | Enable wrapping of items |
+
 [Back to top](#top)
 
 <a name="customLayouts"><br>
@@ -258,7 +289,7 @@ The custom layout must derive from LayoutGroup and override the 2 methods  OnMea
 
 The layouting framework does all the heavy work leaving just the Measuring and Layouting to the Custom Layout.
 
-Layouting is a 2 phase process.  
+Layouting is a 2 phase process.
 First Measuring of the children hence determining the layouts own dimensions.
 Second Layouting the children within itself using their measured sizes. (Positioning the children)
 
@@ -266,7 +297,7 @@ Second Layouting the children within itself using their measured sizes. (Positio
 
 The OnMeasure is the first function to override, 2 parameters are provided, it's the parents width and height MeasureSpecifications which impose the size the custom layout can be.
 
-The Custom layout should then measuure it's children.  
+The Custom layout should then measuure it's children.
 Ti help with measuring children a MeasureChild API is available along with a _children which is an List of the Layouts children, it can be used to iterate and Measure each one.
 
 After the children are measure the Custom Layout can add up their height and widths in any way it needs to.
@@ -274,7 +305,7 @@ Finally calling the SetMeasuredDimensions API with the size it needs to be.
 
 ```protected override void OnLayout( bool changed, LayoutLength left, LayoutLength top, LayoutLength right, LayoutLength bottom )```
 
-The OnLayout is where the children are positioned using the Layout API which takes a frame; start, top, end, bottom.  The positioning of the vertices of the child in turn defines it's size.  
+The OnLayout is where the children are positioned using the Layout API which takes a frame; start, top, end, bottom.  The positioning of the vertices of the child in turn defines it's size.
 
 As in the OnMeasure the _children List can be iterated to get each child in the Layout, then the MeasuredWidth and MeasuredHeight can be queried on each child.
 
